@@ -28,7 +28,20 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
+		System.out.print("\nEnter your first name: ");
+        String firstName = in.nextLine();
+ 		System.out.print("Enter your last name: ");
+        String lastName = in.nextLine();
+ 		System.out.print("Enter your grade: ");
+        int grade = in.nextInt();
+ 		System.out.print("Enter your age: ");
+        int age = in.nextInt();
+ 		in.nextLine();
+ 		System.out.print("Enter your hometown: ");
+        String hometown = in.nextLine();
 
+ 		System.out.printf("\nNAME     : %s %s\nGRADE    : %s\nAGE      : %s\nHOMETOWN : %s\n", firstName, lastName,
+		  grade, age, hometown);
 
         /*
          * Exercise 2.
