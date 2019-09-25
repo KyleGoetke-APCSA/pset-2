@@ -50,7 +50,32 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+		 final double DOLLAR = 1;
+		 final double QUARTER = 0.25;
+		 final double DIME = 0.1;
+		 final double NICKEL = 0.05;
+		 final double PENNY = 0.01;
 
+		 System.out.print("\nEnter a dollar amount: ");
+         double dollarAmount = in.nextDouble();
+
+		 double dollars = Math.floor(dollarAmount / DOLLAR);
+		 dollarAmount -= dollars;
+
+		 double quarters = Math.floor(dollarAmount / QUARTER);
+		 dollarAmount -= (quarters * QUARTER);
+
+		 double dimes = Math.floor(dollarAmount / DIME);
+		 dollarAmount -= (dimes * DIME);
+
+		 double nickels = Math.floor(dollarAmount / NICKEL);
+		 dollarAmount -= (nickels * NICKEL);
+
+		 double pennies = Math.floor(dollarAmount / PENNY);
+		 dollarAmount -= (pennies * PENNY);
+
+		 System.out.printf("\nDOLLARS  : %.0f\nQUARTERS : %.0f\nDIMES    : %.0f\nNICKELS  : %.0f\nPENNIES  : %.0f\n", dollars,
+		   quarters, dimes, nickels, pennies);
 
         /*
          * Exercise 3.
