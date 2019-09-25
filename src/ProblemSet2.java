@@ -84,7 +84,41 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
+		 final int TENS = 10;
+		 final int FIVES = 5;
 
+		 System.out.print("\nEnter a dollar amount: ");
+		 dollarAmount = in.nextDouble();
+
+		 double tens = Math.floor(dollarAmount / TENS);
+		 dollarAmount *= tens;
+
+		 double fives = Math.floor(dollarAmount / FIVES);
+		 fives *= FIVES;
+
+		 dollars = Math.floor(dollarAmount / DOLLAR);
+		 dollars *= DOLLAR;
+
+		 quarters = Math.floor(dollarAmount / QUARTER);
+		 quarters *= QUARTER;
+
+		 dimes = Math.floor(dollarAmount / DIME);
+		 dimes *= DIME;
+
+		 nickels = Math.floor(dollarAmount / NICKEL);
+		 nickels *= NICKEL;
+
+		 pennies = Math.floor(dollarAmount / PENNY);
+		 pennies *= PENNY;
+
+		 double bills = tens + fives + dollars;
+		 dollarAmount -= bills;
+
+		 double coins = quarters + dimes + nickels + pennies;
+		 dollarAmount -= coins;
+
+		 System.out.println(bills);
+		 System.out.println(coins);
 
         /*
          * Exercise 4.
