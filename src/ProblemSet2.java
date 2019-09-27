@@ -184,7 +184,16 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
+		 System.out.printf("\nEnter a length: ");
+		 double length = in.nextInt();
+		 System.out.printf("Enter a width: ");
+		 double width = in.nextInt();
 
+		 area = length * width;
+		 double perimeter = (length * 2) + (width * 2);
+		 double diagonal = Math.hypot(length, width);
+
+		 System.out.printf("\nAREA      : %.2f\nPERIMETER : %.2f\nDIAGONAL  : %.2f\n", area, perimeter, diagonal);
 
         /*
          * Exercise 8.
