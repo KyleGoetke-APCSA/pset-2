@@ -84,41 +84,37 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-		 final int TENS = 10;
-		 final int FIVES = 5;
+		 final int TEN = 10;
+		 final int FIVE = 5;
 
-		 System.out.print("\nEnter a dollar amount: ");
+		 System.out.printf("\nEnter a dollar amount: ");
 		 dollarAmount = in.nextDouble();
 
-		 double tens = Math.floor(dollarAmount / TENS);
-		 dollarAmount *= tens;
+		 double tens = Math.floor(dollarAmount / ((double) TEN));
+		 dollarAmount -= tens * TEN;
 
-		 double fives = Math.floor(dollarAmount / FIVES);
-		 fives *= FIVES;
+		 double fives = Math.floor(dollarAmount / FIVE);
+		 dollarAmount -= fives * FIVE;
 
 		 dollars = Math.floor(dollarAmount / DOLLAR);
-		 dollars *= DOLLAR;
+		 dollarAmount -= dollars * DOLLAR;
 
 		 quarters = Math.floor(dollarAmount / QUARTER);
-		 quarters *= QUARTER;
+		 dollarAmount -= quarters * QUARTER;
 
 		 dimes = Math.floor(dollarAmount / DIME);
-		 dimes *= DIME;
+		 dollarAmount -= dimes * DIME;
 
 		 nickels = Math.floor(dollarAmount / NICKEL);
-		 nickels *= NICKEL;
+		 dollarAmount -= nickels * NICKEL;
 
 		 pennies = Math.floor(dollarAmount / PENNY);
-		 pennies *= PENNY;
+		 dollarAmount -= pennies * PENNY;
 
-		 double bills = tens + fives + dollars;
-		 dollarAmount -= bills;
+		 int coins = (int) (quarters + dimes + nickels + pennies);
+		 int bills = (int) (tens + fives + dollars);
 
-		 double coins = quarters + dimes + nickels + pennies;
-		 dollarAmount -= coins;
-
-		 System.out.println(bills);
-		 System.out.println(coins);
+		 System.out.printf("\nBILLS : %d\nCOINS : %d\n", bills, coins);
 
         /*
          * Exercise 4.
