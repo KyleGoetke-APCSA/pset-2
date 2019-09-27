@@ -123,7 +123,23 @@ public class ProblemSet2 {
          * and inches.
          */
 
+		 System.out.printf("\nEnter a number of inches: ");
+		 int totalInches = in.nextInt();
 
+		 final int INCH_IN_MILE = 63360;
+		 final int INCH_IN_YARD = 36;
+		 final int INCH_IN_FOOT = 12;
+
+		 int miles = (int) Math.floor(totalInches / INCH_IN_MILE);
+		 totalInches -= miles * INCH_IN_MILE;
+
+		 int yards = (int) Math.floor(totalInches / INCH_IN_YARD);
+		 totalInches -= yards * INCH_IN_YARD;
+
+		 int feet = (int) Math.floor(totalInches / INCH_IN_FOOT);
+		 totalInches -= feet * INCH_IN_FOOT;
+
+		 System.out.printf("\nMILES  : %d\nYARDS  : %d\nFEET   : %d\nINCHES : %d\n", miles, yards, feet, totalInches);
 
         /*
          * Exercise 5.
