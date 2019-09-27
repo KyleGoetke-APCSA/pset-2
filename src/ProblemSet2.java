@@ -148,7 +148,19 @@ public class ProblemSet2 {
          * meters, and centimeters.
          */
 
+		 System.out.printf("\nEnter a number of centimeters: ");
+		 int totalCentimeters = in.nextInt();
 
+		 final int CM_IN_KM = 100000;
+		 final int CM_IN_M = 100;
+
+		 int kilometers = (int) Math.floor(totalCentimeters / CM_IN_KM);
+		 totalCentimeters -= kilometers * CM_IN_KM;
+
+		 int meters = (int) Math.floor(totalCentimeters / CM_IN_M);
+		 totalCentimeters -= meters * CM_IN_M;
+
+		 System.out.printf("\nKILOMETERS  : %d\nMETERS      : %d\nCENTIMETERS : %d\n", kilometers, meters, totalCentimeters);
 
         /*
          * Exercise 6.
