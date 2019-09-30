@@ -1,17 +1,7 @@
-/**
+/*
  * Problem Set 2.
- *
- * It's time to put your skills to the test. This problem set focuses on prompting
- * the user for information, manipulating that information, and printing it in
- * specific formats.
- *
- * The specifications for each exercise are outlined below. Your job is to write
- * lines of code to produce answers to my questions. Each exercise requires that
- * you ask the user to enter one or more values. Your code must meet the
- * requirements set forth in this section (as well as the Deliverables section).
- *
- * Work through these exercises on your own. Experiment, make mistakes, ask
- * questions, and fix your mistakes. It's the only way to get good at programming.
+ * Copyright (c) 2019. UCVTS and its affiliated.
+ * Use is allowed as long as credit is given.
  */
 
 import java.util.Scanner;
@@ -74,8 +64,8 @@ public class ProblemSet2 {
 		 double pennies = Math.floor(dollarAmount / PENNY);
 		 dollarAmount -= (pennies * PENNY);
 
-		 System.out.printf("\nDOLLARS  : %.0f\nQUARTERS : %.0f\nDIMES    : %.0f\nNICKELS  : %.0f\nPENNIES  : %.0f\n", dollars,
-		   quarters, dimes, nickels, pennies);
+		 System.out.printf("\nDOLLARS  : %.0f\nQUARTERS : %.0f\nDIMES    : %.0f\nNICKELS  : %.0f\nPENNIES  : %.0f\n",
+		   dollars, quarters, dimes, nickels, pennies);
 
         /*
          * Exercise 3.
@@ -160,7 +150,8 @@ public class ProblemSet2 {
 		 int meters = (int) Math.floor(totalCentimeters / CM_IN_M);
 		 totalCentimeters -= meters * CM_IN_M;
 
-		 System.out.printf("\nKILOMETERS  : %d\nMETERS      : %d\nCENTIMETERS : %d\n", kilometers, meters, totalCentimeters);
+		 System.out.printf("\nKILOMETERS  : %d\nMETERS      : %d\nCENTIMETERS : %d\n", kilometers, meters,
+		   totalCentimeters);
 
         /*
          * Exercise 6.
@@ -239,7 +230,8 @@ public class ProblemSet2 {
 		 System.out.printf("Enter your last name: ");
 		 lastName = in.next();
 
-		 String initials = String.valueOf(firstName.charAt(0)) + String.valueOf(middleName.charAt(0)) + String.valueOf(lastName.charAt(0));
+		 String initials = String.valueOf(firstName.charAt(0)) + String.valueOf(middleName.charAt(0)) +
+		   String.valueOf(lastName.charAt(0));
 
 		 System.out.println("\n" + initials);
 
